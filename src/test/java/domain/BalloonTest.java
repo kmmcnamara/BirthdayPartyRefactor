@@ -9,5 +9,7 @@ public class BalloonTest {
         assertEquals(balloon.getColor(), "Blue");
         assertEquals(balloon.getMaterial(), "Latex");
         assertEquals(balloon.getNumber(), 6);
+        assertEquals(balloon.toString(),
+        "Color:Blue, Material: Latex, Number: 6");
     }
 }

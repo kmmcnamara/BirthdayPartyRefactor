@@ -8,10 +8,6 @@ public class Cake {
     private String size;
     private String cakeColor;
     
-    /**
-     * I'm writing this in AWS Cloud9 and none of the formatting/indentation
-     * options look that good here, so I guess I'm just going to go with this
-     */
     public Cake(
         String cakeFlavor,
         String frostingFlavor, 
