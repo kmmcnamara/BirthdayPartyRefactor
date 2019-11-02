@@ -5,12 +5,13 @@ import static org.junit.Assert.*;
 
 public class CakeTest {
     @Test public void testcake() {
-        Cake cake = new Cake(
-            "Chocolate", 
-            "Cream Cheese",
-            "Round", 
-            "Small",
-            "Pink");
+        Cake cake = new Cake
+            .Builder("Chocolate")
+            .withFrostingFlavor("Cream Cheese")
+            .withShape("Round")
+            .withSize("Small")
+            .withCakeColor("Pink")
+            .build();
         assertEquals(cake.getCakeFlavor(), "Chocolate");
         assertEquals(cake.getFrostingFlavor(), "Cream Cheese");
         assertEquals(cake.getShape(), "Round");

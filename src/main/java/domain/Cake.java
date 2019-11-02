@@ -2,13 +2,59 @@ package domain;
 
 public class Cake {
     
+    public static class Builder {
+        private String cakeFlavor;
+        private String frostingFlavor;
+        private String shape;
+        private String size;
+        private String cakeColor;
+        
+        public Builder(String cakeFlavor) {
+            this.cakeFlavor = cakeFlavor;
+        }
+        
+        public Builder withFrostingFlavor(String frostingFlavor) {
+            this.frostingFlavor = frostingFlavor;
+            
+            return this;
+        }
+        
+        public Builder withShape(String shape) {
+            this.shape = shape;
+            
+            return this;
+        }
+        
+        public Builder withSize(String size) {
+            this.size = size;
+            
+            return this;
+        }
+        
+        public Builder withCakeColor(String cakeColor) {
+            this.cakeColor = cakeColor;
+            
+            return this;
+        }
+        
+        public Cake build() {
+            return new Cake(
+                this.cakeFlavor,
+                this.frostingFlavor,
+                this.shape,
+                this.size,
+                this.cakeColor
+            );
+        }
+    }
+    
     private String cakeFlavor;
     private String frostingFlavor;
     private String shape;
     private String size;
     private String cakeColor;
     
-    public Cake(
+    private Cake(
         String cakeFlavor,
         String frostingFlavor, 
         String shape, 

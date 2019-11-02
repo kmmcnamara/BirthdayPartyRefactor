@@ -1,5 +1,10 @@
 package domain;
 
+/**
+ * It's a Balloon, with a Builder class.
+ * I'd usually put descriptions of the params here but they seem pretty
+ * self-explanatory in this case
+ */
 public class Balloon {
     
     public static class Builder {
