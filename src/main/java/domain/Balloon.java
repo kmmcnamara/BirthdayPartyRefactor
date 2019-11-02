@@ -2,11 +2,38 @@ package domain;
 
 public class Balloon {
     
+    public static class Builder {
+        
+        private String color;
+        private String material;
+        private int number;
+        
+        public Builder(String color) {
+            this.color = color;
+        }
+        
+        public Builder withMaterial(String material) {
+            this.material = material;
+            
+            return this;
+        }
+        
+        public Builder withNumber(int number) {
+            this.number = number;
+            
+            return this;
+        }
+        
+        public Balloon build() {
+            return new Balloon(this.color, this.material, this.number);
+        }
+    }
+    
     private String color;
     private String material;
     private int number;
     
-    public Balloon(String color, String material, int number) {
+    private Balloon(String color, String material, int number) {
         this.color = color;
         this.material = material;
         this.number = number;
