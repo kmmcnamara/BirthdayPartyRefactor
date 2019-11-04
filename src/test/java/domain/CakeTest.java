@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CakeTest {
-    @Test public void testcake() {
+    @Test public void testCakeHappyPath() {
         Cake cake = new Cake
             .Builder("Chocolate")
             .withFrostingFlavor("Cream Cheese")
@@ -20,5 +20,10 @@ public class CakeTest {
         assertEquals(cake.toString(),
         "Cake Flavor: Chocolate, Frosting Flavor: Cream Cheese, " +
         "Shape: Round, Size: Small, Cake Color: Pink");
+    }
+    
+    @Test(expected = IllegalStateException.class) 
+    public void testCakeIllegalState() {
+        Cake cake = new Cake.Builder("Funfetti").build();
     }
 }

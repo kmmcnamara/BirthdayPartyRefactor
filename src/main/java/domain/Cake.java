@@ -38,13 +38,35 @@ public class Cake {
         }
         
         public Cake build() {
-            return new Cake(
+            Cake cake = new Cake(
                 this.cakeFlavor,
                 this.frostingFlavor,
                 this.shape,
                 this.size,
                 this.cakeColor
             );
+                
+            this.validateCake(cake);
+                
+            return cake;
+        }
+        
+        private void validateCake(Cake cake) {
+            /**
+             * This is really messy but I'm not familiar anymore with if it's ok
+             * to use reflection to loop through all the properties to assert
+             * not-null-ness, or if there are better ways not to ensure
+             * correctness.
+             */
+            if (
+                cake.getCakeFlavor() == null ||
+                cake.getFrostingFlavor() == null ||
+                cake.getShape() == null ||
+                cake.getSize() == null ||
+                cake.getCakeColor() == null
+            ) {
+                throw new IllegalStateException();
+            }
         }
     }
     
