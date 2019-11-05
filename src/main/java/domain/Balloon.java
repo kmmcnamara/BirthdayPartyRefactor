@@ -2,7 +2,7 @@ package domain;
 
 /**
  * It's a Balloon, with a Builder class.
- * I'd usually put description of what domain object this represents
+ * I'd usually put a description of what domain object this represents
  * but I'm pretty sure everyone knows what a ballooon is
  */
 public class Balloon {
