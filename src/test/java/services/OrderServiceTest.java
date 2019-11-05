@@ -5,8 +5,6 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import java.io.*;
 import domain.*;
-//import org.apache.commons.lang.StringUtils;
-
 
 public class OrderServiceTest {
     

@@ -65,7 +65,9 @@ public class Cake {
                 cake.getSize() == null ||
                 cake.getCakeColor() == null
             ) {
-                throw new IllegalStateException();
+                throw new IllegalStateException("Cake was built without all " +
+                    "properties defined"
+                );
             }
         }
     }

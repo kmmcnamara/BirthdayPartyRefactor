@@ -7,6 +7,11 @@ import domain.Cake;
 import services.OrderService;
 
 public class App {
+    /** 
+     * Didn't see any reason to remove this, I would assume there would be some
+     * type of testing in the class that had main(), getGreeting() seems like
+     * a good enough facsimile of that to em
+     */
     public String getGreeting() {
         return "Hello world.";
     }
@@ -35,19 +40,33 @@ public class App {
 
     private static void defaultOrders(OrderService orderService) {
         System.out.println(orderService.orderBalloon(
-            new Balloon.Builder("Red").withMaterial("Mylar").withNumber(4).build()
+            new Balloon.Builder("Red").withMaterial("Mylar").withNumber(4)
+            .build()
         ));
         System.out.println(orderService.orderCake(
             new Cake.Builder("Chocolate").withFrostingFlavor("Chocolate")
                     .withShape("Circle").withSize("Large").withCakeColor("Brown")
                     .build()
         ));
-        /*
-        orderService.orderBalloon(new Balloon("Blue", "Latex", 7));
-        orderService.orderCake(new Cake("Vanilla", "Chocolate", "Square", "Medium", "Brown"));
         
-        orderService.orderBalloon(new Balloon("yellow", "mylar", 4));
-        orderService.orderCake(new Cake("Vanilla", "Vanilla", "Square", "small", "yellow"));*/
+        System.out.println(orderService.orderBalloon(
+            new Balloon.Builder("Blue").withMaterial("Latex").withNumber(7)
+                .build()
+        ));
+        System.out.println(orderService.orderCake(
+            new Cake.Builder("Vanilla").withFrostingFlavor("Chocolate")
+                    .withShape("Square").withSize("Medium").withCakeColor("Brown")
+                    .build()
+        ));
+        
+        System.out.println(orderService.orderBalloon(
+            new Balloon.Builder("yellow").withMaterial("Mylar").withNumber(4)
+                .build()
+        ));
+        System.out.println(orderService.orderCake(
+            new Cake.Builder("Vanilla").withFrostingFlavor("Vanilla")
+                    .withShape("Square").withSize("Small").withCakeColor("Yellow")
+                    .build()
+        ));
     }
-
 }

@@ -11,16 +11,6 @@ import java.io.*;
  */
 public class OrderService {
     
-    /*private PrintStream output;
-    
-    public OrderService(ByteArrayOutputStream output) {
-        this.output = new PrintStream(output);
-    }
-    
-    public OrderService() {
-        this.output = System.out;
-    }*/
-    
     /**
      * Ordinarily this would be doing something like saving to a database
      */
