@@ -64,7 +64,7 @@ public class Balloon {
     }
     
     public String toString() {
-        return String.format("Color:%s, Material: %s, Number: %s", 
+        return String.format("Color: %s, Material: %s, Number: %s", 
         this.color, this.material, this.number);
     }
     
