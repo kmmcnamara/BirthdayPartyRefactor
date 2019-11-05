@@ -14,7 +14,7 @@ public class BalloonTest {
         assertEquals(balloon.getMaterial(), "Latex");
         assert(balloon.getNumber().equals(6));
         assertEquals(balloon.toString(),
-        "Color:Blue, Material: Latex, Number: 6");
+        "Color: Blue, Material: Latex, Number: 6");
     }
     
     @Test(expected = IllegalStateException.class)
